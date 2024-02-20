@@ -1,0 +1,6 @@
+@XMLtoCSV_HostAddress = http://localhost:5270
+
+GET {{XMLtoCSV_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
