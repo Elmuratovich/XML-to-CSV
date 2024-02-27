@@ -37,8 +37,6 @@ namespace XMLtoCSV.Controllers
                               "D_CREATE", "LAST_MOD", "NOM_DELT", "TEXT_DELT", "PREQ", "POKR", "KOD_OBJAV", "KOD_PREK", "SIGN", "EfoID", "DT_IZM", "IMG" };
             try
             {
-
-
                 using (StreamWriter writer = new StreamWriter(csvFilePath))
                 {
                     writer.WriteLine(string.Join("|", headers));
@@ -50,7 +48,6 @@ namespace XMLtoCSV.Controllers
                         using (StreamReader reader = new StreamReader(xmlFile, Encoding.GetEncoding("iso-8859-5")))
                         {
                             XDocument doc = XDocument.Load(reader);
-
                             try
                             {
                                 var dataElements = doc.Descendants("DOC_MN_OPOV_VG").ToList();
